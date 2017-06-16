@@ -1,14 +1,20 @@
 #!/bin/sh
 echo 'Install Start!!'
 
-#  Module_Install
+## For yum_install Start
+#Standard_Module_Install
 sudo yum install -y httpd
 sudo yum install -y mysql
 sudo yum install -y mysql-client mysql-server
 sudo yum install -y mlocate
 sudo yum install -y wget
+#For Git Install
 sudo yum install -y git
+#For Rails Bundle Install
+sudo yum install -y sqlite-devel
 sudo yum install -y gcc openssl-devel libyaml-devel libffi-devel readline-devel zlib-devel gdbm-devel ncurses-devel
+sudo yum install -y nodejs --enablerepo=epel
+## For yum_install End
 
 #  Automatic_Start_Setting
 sudo chkconfig httpd on
